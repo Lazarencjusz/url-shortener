@@ -1,0 +1,12 @@
+{
+  "src/**/*.{ts,tsx}": [
+    "npm run tslint:fix",
+    "npm run prettier:ts:fix",
+    "git add ."
+  ],
+  "src/**/*.{less}": [
+    "npm run stylelint:fix",
+    "npm run prettier:less:fix",
+    "git add ."
+  ]
+}

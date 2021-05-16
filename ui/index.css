@@ -1,0 +1,14 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.url-input-wrapper {
+  width: 500px;
+}
+
+#results-section.hiden {
+  display: none;
+}
