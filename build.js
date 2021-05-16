@@ -11,10 +11,11 @@ const buildStyles = () => {
       if (err) {
         // ^
         console.error(err); // |___{ overwrite: true } // add if you want to replace existing folder or file with same name
+        reject(err);
       } else {
         console.log('Success: copy index.css');
+        resolve();
       }
-      resolve();
     });
   } catch (error) {
     reject(error);
@@ -55,10 +56,11 @@ function buildHtml() {
       if (err) {
         // ^
         console.error(err); // |___{ overwrite: true } // add if you want to replace existing folder or file with same name
+        reject(err);
       } else {
         console.log('Success: copy index.html');
+        resolve();
       }
-      resolve();
     });
   } catch (error) {
     reject(error);
