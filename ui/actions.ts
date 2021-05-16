@@ -1,6 +1,11 @@
 import { linkElement, resultsSection, urlInput, urlInputText } from './selectors';
 import { shortenUrl } from './service';
 
+export const clearUrlInput = () => (urlInput.value = '');
+export const makeResultVisible = () => (resultsSection.className = '');
+export const setLinkText = (text: string) => (linkElement.innerText = `localhost${text}`);
+export const setLinkHref = (href: string) => linkElement.setAttribute('href', href);
+
 export const onShortIt = async () => {
   const url = urlInputText();
   const shortUrl = await shortenUrl(url);
@@ -10,8 +15,3 @@ export const onShortIt = async () => {
   setLinkHref(linkText);
   makeResultVisible();
 };
-
-export const clearUrlInput = () => (urlInput.value = '');
-export const makeResultVisible = () => (resultsSection.className = '');
-export const setLinkText = (text: string) => (linkElement.innerText = `localhost${text}`);
-export const setLinkHref = (href: string) => linkElement.setAttribute('href', href);
