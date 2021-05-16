@@ -6,12 +6,14 @@
 # compile code, build container images, initialize a database,
 # anything else that needs to happen before your server is started
 # for the first time
-setup:
+setup: npm ci
+	   npm run build
+
 
 # `make server` will be used after `make setup` in order to start
 # an http server process that listens on any unreserved port
 #	of your choice (e.g. 8080). 
-server:
+server:	npm run start
 
 # `make test` will be used after `make setup` in order to run
 # your test suite.

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["es2015", "es5", "es6", "es7", "dom"],
+    "types": ["node"],
+    "diagnostics": true,
+    "noEmitOnError": true,
+    "pretty": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "ES2017",
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "exclude": ["dist", "node_modules", "build"]
+}
